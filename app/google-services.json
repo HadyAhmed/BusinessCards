@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "372246569480",
+    "firebase_url": "https://business-card-b7858.firebaseio.com",
+    "project_id": "business-card-b7858",
+    "storage_bucket": "business-card-b7858.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:372246569480:android:f5b9c62349fb5b35",
+        "android_client_info": {
+          "package_name": "com.hadi.bc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "372246569480-e9d0gidn59e8kk2vumd92ijq86qpv7bh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hadi.bc",
+            "certificate_hash": "803cdec3dea81e688ffe141a74bad99950141ae9"
+          }
+        },
+        {
+          "client_id": "372246569480-j4g4q2icmghjh4kmmi0uvbbvnrim759u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqkE1tAQgDeKEShtRadLT8eshK8r-FtIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "372246569480-j4g4q2icmghjh4kmmi0uvbbvnrim759u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

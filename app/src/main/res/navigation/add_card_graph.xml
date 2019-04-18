@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_card_graph"
+    app:startDestination="@id/cardInformationFragment">
+
+    <fragment
+        android:id="@+id/cardInformationFragment"
+        android:name="com.hadi.bc.view.CardInformationFragment"
+        android:label="fragment_card_information"
+        tools:layout="@layout/fragment_card_information">
+        <action
+            android:id="@+id/moveToCardChoiseFragment"
+            app:destination="@id/chooseCardFragment" />
+        <argument
+            android:name="cardItem"
+            app:argType="com.hadi.bc.model.CardItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseCardFragment"
+        android:name="com.hadi.bc.view.ChooseCardFragment"
+        android:label="fragment_choose_card"
+        tools:layout="@layout/fragment_choose_card" />
+</navigation>
