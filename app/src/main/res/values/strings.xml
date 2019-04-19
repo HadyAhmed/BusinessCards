@@ -4,7 +4,39 @@
     <string name="facebook_app_id">629036880875334</string>
     <string name="fb_login_protocol_scheme">fb629036880875334</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="empty_card_indication">Your cards are empty</string>
+    <string name="name_label">Name</string>
+    <string name="sign_out_btn">Sign Out</string>
+    <string name="image_profile_desc">image profile</string>
+    <string name="banner_desc">banner background image</string>
+    <string name="get_started_btn">Get Started</string>
+    <string name="business_card_preview_desc">preview for the business card</string>
+    <string name="logo_preview_desc">logo preview</string>
+    <string name="card_name_label">Card Name</string>
+    <string name="name_of_the_card_hint">name of the card</string>
+    <string name="your_name_label">Your Name</string>
+    <string name="card_name_holder_hint">card name holder</string>
+    <string name="occupation_label">Occupation</string>
+    <string name="occupation_hint">ex: Android Developer</string>
+    <string name="phone_number_label">Phone Number</string>
+    <string name="phone_number_hint">ex: +201123456789</string>
+    <string name="email_label">Email</string>
+    <string name="email_hint">one@domain.com</string>
+    <string name="address_label">Address</string>
+    <string name="address_hint">cairo, Egy</string>
+    <string name="web_site_label">Web Site</string>
+    <string name="site_hint">http://www.domain.com</string>
+    <string name="sloganLabel">Slogan</string>
+    <string name="slogan_hint">ex: development company</string>
+    <string name="pick_up_logo_label">Pick up Logo</string>
+    <string name="pick_up_image_btn">Pick up Image</string>
+    <string name="continue_btn">Continue</string>
+    <string name="first_banner_body">Welcome to business card designer app</string>
+    <string name="first_banner_header">Business Card Designer</string>
+    <string name="second_banner_header">Free Ideas</string>
+    <string name="second_banner_body">Get inspired many ideas</string>
+    <string name="third_banner_body">Sync your data with your google account so you won\'t lost your cards never</string>
+    <string name="third_banner_header">Keep Sync</string>
 
 </resources>

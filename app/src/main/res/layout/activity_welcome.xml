@@ -13,6 +13,7 @@
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
+            android:contentDescription="@string/banner_desc"
             android:src="@drawable/banner" />
 
         <androidx.viewpager.widget.ViewPager
@@ -41,7 +42,7 @@
             android:layout_above="@id/pageIndicatorView"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="16dp"
-            android:text="Get Started" />
+            android:text="@string/get_started_btn" />
 
     </RelativeLayout>
 </layout>

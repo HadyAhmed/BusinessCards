@@ -39,6 +39,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/business_card_preview_desc"
                 tools:src="@drawable/front_00" />
 
             <LinearLayout
@@ -49,6 +50,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/imagePreview"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                android:baselineAligned="false"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <LinearLayout
@@ -128,6 +130,7 @@
                         android:layout_centerInParent="true"
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
+                        android:contentDescription="@string/logo_preview_desc"
                         tools:src="@mipmap/ic_launcher" />
 
                     <TextView

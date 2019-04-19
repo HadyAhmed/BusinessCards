@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/cardInformationFragment"
-        android:name="com.hadi.bc.view.CardInformationFragment"
+        android:name="com.hadi.bc.view.AddCardFragment"
         android:label="fragment_card_information"
-        tools:layout="@layout/fragment_card_information">
+        tools:layout="@layout/fragment_add_card">
         <action
             android:id="@+id/moveToCardChoiseFragment"
             app:destination="@id/chooseCardFragment" />

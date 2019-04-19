@@ -5,7 +5,6 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -22,12 +21,12 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
 import com.hadi.bc.R;
-import com.hadi.bc.databinding.FragmentCardInformationBinding;
+import com.hadi.bc.databinding.FragmentAddCardBinding;
 import com.hadi.bc.model.CardItem;
 import com.squareup.picasso.Picasso;
 
 
-public class CardInformationFragment extends Fragment implements View.OnClickListener {
+public class AddCardFragment extends Fragment implements View.OnClickListener {
     private static final int PICK_IMAGE_RC = 2006;
     private static final int READ_EXTERNAL_STORAGE_RC = 2007;
     private Context context;
@@ -39,17 +38,17 @@ public class CardInformationFragment extends Fragment implements View.OnClickLis
         this.context = context;
     }
 
-    public CardInformationFragment() {
+    private FragmentAddCardBinding cardInformationBinding;
+
+    public AddCardFragment() {
         // Required empty public constructor
     }
-
-    private FragmentCardInformationBinding cardInformationBinding;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        cardInformationBinding = FragmentCardInformationBinding.inflate(inflater, container, false);
+        cardInformationBinding = FragmentAddCardBinding.inflate(inflater, container, false);
 
         cardInformationBinding.cardNameEt.addTextChangedListener(setTextViewListener(cardInformationBinding.cardName));
         cardInformationBinding.cardNameHolderEt.addTextChangedListener(setTextViewListener(cardInformationBinding.cardNameHolderTv));
@@ -115,11 +114,7 @@ public class CardInformationFragment extends Fragment implements View.OnClickLis
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == PICK_IMAGE_RC) {
             if (data != null) {
-                Uri image = data.getData();
-                if (image != null) {
-                    imageUri = data.getData().getPath();
-                    Picasso.get().load(imageUri).into(cardInformationBinding.companyLogo);
-                }
+                Picasso.get().load(data.getData()).into(cardInformationBinding.companyLogo);
             } else {
                 Toast.makeText(context, "Error picking image", Toast.LENGTH_SHORT).show();
             }

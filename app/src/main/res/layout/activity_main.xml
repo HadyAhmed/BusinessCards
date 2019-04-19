@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/raleway_bold"
-            android:text="Your cards are empty"
+            android:text="@string/empty_card_indication"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textAppearance="?android:textAppearanceMedium" />

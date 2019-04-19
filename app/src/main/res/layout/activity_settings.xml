@@ -39,6 +39,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/settingsAppBar"
             app:userImageSrc="@{firebaseUser.photoUrl}"
+            android:contentDescription="@string/image_profile_desc"
             tools:srcCompat="@tools:sample/avatars[0]" />
 
         <TextView
@@ -48,7 +49,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/raleway_bold"
-            android:text="Name"
+            android:text="@string/name_label"
             android:textAppearance="?android:textAppearanceLarge"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/userImage" />
@@ -72,7 +73,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/raleway_bold"
-            android:text="Email"
+            android:text="@string/email_label"
             android:textAppearance="?android:textAppearanceLarge"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/userNameLabel" />
@@ -91,11 +92,10 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/signOuBtn"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="Sign Out"
+            android:text="@string/sign_out_btn"
             app:cornerRadius="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

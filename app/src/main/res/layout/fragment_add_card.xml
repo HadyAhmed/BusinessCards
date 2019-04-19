@@ -6,7 +6,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.CardInformationFragment">
+        tools:context=".view.AddCardFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -166,7 +166,7 @@
                     android:layout_row="0"
                     android:layout_column="0"
                     android:fontFamily="@font/raleway_bold"
-                    android:text="Card Name"
+                    android:text="@string/card_name_label"
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -175,7 +175,7 @@
                     android:layout_row="0"
                     android:layout_column="1"
                     android:layout_marginStart="8dp"
-                    android:hint="name of the card">
+                    android:hint="@string/name_of_the_card_hint">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/cardNameEt"
@@ -189,7 +189,7 @@
                     android:layout_row="1"
                     android:layout_column="0"
                     android:fontFamily="@font/raleway_bold"
-                    android:text="Your Name"
+                    android:text="@string/your_name_label"
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -198,7 +198,7 @@
                     android:layout_row="1"
                     android:layout_column="1"
                     android:layout_marginStart="8dp"
-                    android:hint="card name holder">
+                    android:hint="@string/card_name_holder_hint">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/cardNameHolderEt"
@@ -212,7 +212,7 @@
                     android:layout_row="2"
                     android:layout_column="0"
                     android:fontFamily="@font/raleway_bold"
-                    android:text="Occupation"
+                    android:text="@string/occupation_label"
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -221,7 +221,7 @@
                     android:layout_row="2"
                     android:layout_column="1"
                     android:layout_marginStart="8dp"
-                    android:hint="ex: Android Developer">
+                    android:hint="@string/occupation_hint">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/occupationEt"
@@ -235,7 +235,7 @@
                     android:layout_row="3"
                     android:layout_column="0"
                     android:fontFamily="@font/raleway_bold"
-                    android:text="Phone Number"
+                    android:text="@string/phone_number_label"
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -244,7 +244,7 @@
                     android:layout_row="3"
                     android:layout_column="1"
                     android:layout_marginStart="8dp"
-                    android:hint="ex: +201123456789">
+                    android:hint="@string/phone_number_hint">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/phoneNumberEt"
@@ -258,7 +258,7 @@
                     android:layout_row="4"
                     android:layout_column="0"
                     android:fontFamily="@font/raleway_bold"
-                    android:text="Email"
+                    android:text="@string/email_label"
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -267,7 +267,7 @@
                     android:layout_row="4"
                     android:layout_column="1"
                     android:layout_marginStart="8dp"
-                    android:hint="one@domain.com">
+                    android:hint="@string/email_hint">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/emailEt"
@@ -281,7 +281,7 @@
                     android:layout_row="5"
                     android:layout_column="0"
                     android:fontFamily="@font/raleway_bold"
-                    android:text="Address"
+                    android:text="@string/address_label"
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -290,7 +290,7 @@
                     android:layout_row="5"
                     android:layout_column="1"
                     android:layout_marginStart="8dp"
-                    android:hint="cairo, Egy">
+                    android:hint="@string/address_hint">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/addressEt"
@@ -304,7 +304,7 @@
                     android:layout_row="6"
                     android:layout_column="0"
                     android:fontFamily="@font/raleway_bold"
-                    android:text="Web Site"
+                    android:text="@string/web_site_label"
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -313,7 +313,7 @@
                     android:layout_row="6"
                     android:layout_column="1"
                     android:layout_marginStart="8dp"
-                    android:hint="http://www.domain.com">
+                    android:hint="@string/site_hint">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/webSiteEt"
@@ -327,7 +327,7 @@
                     android:layout_row="7"
                     android:layout_column="0"
                     android:fontFamily="@font/raleway_bold"
-                    android:text="Slogan"
+                    android:text="@string/sloganLabel"
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -336,7 +336,7 @@
                     android:layout_row="7"
                     android:layout_column="1"
                     android:layout_marginStart="8dp"
-                    android:hint="ex: development company">
+                    android:hint="@string/slogan_hint">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/sloganEt"
@@ -350,24 +350,22 @@
                     android:layout_row="8"
                     android:layout_column="0"
                     android:fontFamily="@font/raleway_bold"
-                    android:text="Pick up Logo"
+                    android:text="@string/pick_up_logo_label"
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/pickUpImageBtn"
-                    style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_row="8"
                     android:layout_column="1"
-                    android:text="Pick up Image" />
+                    android:text="@string/pick_up_image_btn" />
             </GridLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/nextBtn"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:text="Continue"
+                android:text="@string/continue_btn"
                 app:cornerRadius="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
