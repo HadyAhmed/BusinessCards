@@ -15,7 +15,7 @@
             app:destination="@id/chooseCardFragment" />
         <argument
             android:name="cardItem"
-            app:argType="com.hadi.bc.model.CardItem" />
+            app:argType="com.hadi.bc.model.UserCard" />
     </fragment>
     <fragment
         android:id="@+id/chooseCardFragment"

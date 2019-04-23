@@ -1,6 +1,7 @@
 package com.hadi.bc.adapter;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
@@ -9,27 +10,30 @@ import androidx.databinding.BindingAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hadi.bc.databinding.BusinessCardItemBinding;
-import com.hadi.bc.model.CardItem;
+import com.hadi.bc.model.UserCard;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 public class ChooseCardAdapter extends RecyclerView.Adapter<ChooseCardAdapter.CardViewHolder> {
     private LayoutInflater inflater;
-    private List<CardItem> cardItems;
+    private List<UserCard> cardItems;
     private OnCardClickListener cardClickListener;
 
     public ChooseCardAdapter(OnCardClickListener cardClickListener) {
         this.cardClickListener = cardClickListener;
     }
 
-    public interface OnCardClickListener {
-        void onCardClick(CardItem cardItem);
-    }
-
-    public void setCardItems(List<CardItem> cardItems) {
+    public void setCardItems(List<UserCard> cardItems) {
         this.cardItems = cardItems;
         notifyDataSetChanged();
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull CardViewHolder holder, int position) {
+        UserCard item = cardItems.get(position);
+        holder.setCardItem(item);
+        holder.setCardItemClickListener(cardClickListener);
     }
 
     @NonNull
@@ -41,11 +45,8 @@ public class ChooseCardAdapter extends RecyclerView.Adapter<ChooseCardAdapter.Ca
         return new CardViewHolder(BusinessCardItemBinding.inflate(inflater, parent, false));
     }
 
-    @Override
-    public void onBindViewHolder(@NonNull CardViewHolder holder, int position) {
-        CardItem item = cardItems.get(position);
-        holder.setCardItem(item);
-        holder.setCardItemClickListener(cardClickListener);
+    public interface OnCardClickListener {
+        void onCardClick(View view, UserCard cardItem);
     }
 
     @Override
@@ -70,7 +71,7 @@ public class ChooseCardAdapter extends RecyclerView.Adapter<ChooseCardAdapter.Ca
             this.cardItemBinding = itemBinding;
         }
 
-        void setCardItem(CardItem cardItem) {
+        void setCardItem(UserCard cardItem) {
             cardItemBinding.setBusinessCardInfo(cardItem);
         }
 

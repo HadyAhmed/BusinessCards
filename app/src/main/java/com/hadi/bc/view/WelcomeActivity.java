@@ -10,9 +10,9 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.hadi.bc.R;
-import com.hadi.bc.WelcomeBannerData;
 import com.hadi.bc.adapter.MainViewPagerAdapter;
 import com.hadi.bc.databinding.ActivityWelcomeBinding;
+import com.hadi.bc.model.WelcomeBannerData;
 import com.rd.animation.type.AnimationType;
 
 public class WelcomeActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, View.OnClickListener {

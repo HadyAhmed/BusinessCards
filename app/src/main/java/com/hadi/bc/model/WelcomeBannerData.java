@@ -1,8 +1,8 @@
-package com.hadi.bc;
+package com.hadi.bc.model;
 
 import android.content.Context;
 
-import com.hadi.bc.model.WelcomeItem;
+import com.hadi.bc.R;
 
 import java.util.ArrayList;
 import java.util.List;
