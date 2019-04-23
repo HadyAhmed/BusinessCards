@@ -11,7 +11,7 @@ import androidx.databinding.DataBindingUtil;
 import com.hadi.bc.R;
 import com.hadi.bc.databinding.ActivityAddCardBinding;
 
-public class AddCardActivityChoice extends AppCompatActivity implements ChooseCardFragment.OnCardClickListenerChoice {
+public class AddCardActivity extends AppCompatActivity implements ChooseCardFragment.OnCardClickListenerChoice {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class AddCardActivityChoice extends AppCompatActivity implements ChooseCa
 
     @Override
     public void moveToMainActivity() {
-        startActivity(new Intent(AddCardActivityChoice.this, MainActivity.class));
+        startActivity(new Intent(AddCardActivity.this, MainActivity.class));
         finish();
     }
 }

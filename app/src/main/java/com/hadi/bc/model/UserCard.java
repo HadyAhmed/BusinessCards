@@ -6,6 +6,15 @@ import android.os.Parcelable;
 
 public class UserCard implements Parcelable {
 
+    private String cardAddress;
+    private String cardEmail;
+    private String cardNameHolder;
+    private String cardOccupation;
+    private String cardPhoneNumber;
+    private String cardSlogan;
+    private String cardTitle;
+    private String cardWebsite;
+    private String url;
     public static final Parcelable.Creator<UserCard> CREATOR = new Parcelable.Creator<UserCard>() {
         @Override
         public UserCard createFromParcel(Parcel source) {
@@ -17,15 +26,6 @@ public class UserCard implements Parcelable {
             return new UserCard[size];
         }
     };
-    private String cardAddress;
-    private String cardEmail;
-    private String cardNameHolder;
-    private String cardOccupation;
-    private String cardPhoneNumber;
-    private String cardSlogan;
-    private String cardTitle;
-    private String cardWebsite;
-    private String url;
 
     public UserCard(String cardAddress, String cardEmail, String cardNameHolder, String cardOccupation,
                     String cardPhoneNumber, String cardSlogan, String cardTitle, String cardWebsite) {
@@ -42,6 +42,8 @@ public class UserCard implements Parcelable {
     public UserCard() {
     }
 
+    private String firebaseKey;
+
     protected UserCard(Parcel in) {
         this.cardAddress = in.readString();
         this.cardEmail = in.readString();
@@ -52,6 +54,7 @@ public class UserCard implements Parcelable {
         this.cardTitle = in.readString();
         this.cardWebsite = in.readString();
         this.url = in.readString();
+        this.firebaseKey = in.readString();
     }
 
     public String getCardAddress() {
@@ -131,6 +134,14 @@ public class UserCard implements Parcelable {
         return 0;
     }
 
+    public String getFirebaseKey() {
+        return firebaseKey;
+    }
+
+    public void setFirebaseKey(String firebaseKey) {
+        this.firebaseKey = firebaseKey;
+    }
+
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.cardAddress);
@@ -142,5 +153,6 @@ public class UserCard implements Parcelable {
         dest.writeString(this.cardTitle);
         dest.writeString(this.cardWebsite);
         dest.writeString(this.url);
+        dest.writeString(this.firebaseKey);
     }
 }

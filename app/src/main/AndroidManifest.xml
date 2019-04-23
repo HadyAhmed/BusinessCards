@@ -15,6 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <receiver android:name=".CardsAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/cards_app_widget_info" />
+        </receiver>
 
         <activity android:name=".view.WelcomeActivity">
             <intent-filter>
@@ -28,7 +37,7 @@
             android:name=".view.MainActivity"
             android:launchMode="singleTop" />
         <activity android:name=".view.SettingsActivity" />
-        <activity android:name=".view.AddCardActivityChoice" />
+        <activity android:name=".view.AddCardActivity" />
         <activity
             android:name=".view.CardDetailActivity"
             android:parentActivityName=".view.MainActivity">
@@ -36,7 +45,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".view.MainActivity" />
         </activity>
-
     </application>
 
 </manifest>

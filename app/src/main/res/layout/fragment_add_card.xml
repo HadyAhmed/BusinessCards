@@ -17,7 +17,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Card Name"
+                android:text="@string/card_name"
                 android:textAppearance="?android:textAppearanceLarge"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="(preview)"
+                android:text="@string/preview"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cardTitle" />
 
@@ -56,6 +56,7 @@
                         android:src="@drawable/front_00"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
+                        android:contentDescription="@string/business_card_preview_desc"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <LinearLayout
