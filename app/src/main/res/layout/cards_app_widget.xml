@@ -1,13 +1,25 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/widget_background"
+    android:orientation="vertical"
     android:padding="@dimen/widget_margin">
 
-    <Button
-        android:id="@+id/addCardBtn"
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="@string/add_widget" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="Cards"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@android:color/white" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@android:color/white" />
+</LinearLayout>

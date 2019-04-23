@@ -42,5 +42,7 @@
     <string name="ys_btn">Yes</string>
     <string name="cancel_btn">Cancel</string>
     <string name="appAdsId">ca-app-pub-1683808898642028~6737762309</string>
+    <string name="settings_action_menu">Settings</string>
+    <string name="add_card_desc">Button to add create business card</string>
 
 </resources>

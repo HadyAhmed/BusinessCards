@@ -17,7 +17,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
+    signingConfigs {
+        config {
+            keyAlias 'myKey'
+            keyPassword '652173@#'
+            storeFile file('keyStores/businessCard.jks')
+            storePassword '652173@#'
+        }
+    }
     dataBinding {
         enabled = true
     }
