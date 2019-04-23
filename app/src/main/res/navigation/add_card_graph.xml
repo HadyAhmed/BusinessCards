@@ -2,7 +2,6 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/add_card_graph"
     app:startDestination="@id/cardInformationFragment">
 
     <fragment
@@ -10,12 +9,10 @@
         android:name="com.hadi.bc.view.AddCardFragment"
         android:label="fragment_card_information"
         tools:layout="@layout/fragment_add_card">
-        <action
-            android:id="@+id/moveToCardChoiseFragment"
-            app:destination="@id/chooseCardFragment" />
+        <action app:destination="@id/chooseCardFragment" />
         <argument
             android:name="cardItem"
-            app:argType="com.hadi.bc.model.CardItem" />
+            app:argType="com.hadi.bc.model.UserCard" />
     </fragment>
     <fragment
         android:id="@+id/chooseCardFragment"

@@ -13,27 +13,36 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/cardName"
+                android:id="@+id/cardTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Card Name"
+                android:text="@string/card_name"
                 android:textAppearance="?android:textAppearanceLarge"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <TextView
+                android:id="@+id/previewTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/preview"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardTitle" />
+
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/materialCardPreview"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 app:cardCornerRadius="6dp"
                 app:cardElevation="6dp"
                 app:cardUseCompatPadding="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cardName">
+                app:layout_constraintTop_toBottomOf="@id/previewTv">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -47,6 +56,7 @@
                         android:src="@drawable/front_00"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
+                        android:contentDescription="@string/business_card_preview_desc"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <LinearLayout
@@ -118,31 +128,17 @@
                                 tools:text="www.example.com" />
                         </LinearLayout>
 
-                        <RelativeLayout
+
+                        <TextView
+                            android:id="@+id/sloganTv"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="1">
-
-                            <ImageView
-                                android:id="@+id/companyLogo"
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_centerInParent="true"
-                                android:scaleType="centerCrop"
-                                tools:src="@mipmap/ic_launcher" />
-
-                            <TextView
-                                android:id="@+id/sloganTv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/companyLogo"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginTop="8dp"
-                                android:fontFamily="@font/raleway_bold"
-                                android:gravity="center"
-                                android:textAppearance="?android:textAppearanceMedium"
-                                tools:text="Entertainment Company" />
-                        </RelativeLayout>
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/raleway_bold"
+                            android:gravity="center"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            tools:text="Entertainment Company" />
                     </LinearLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -165,13 +161,14 @@
                 <TextView
                     android:layout_row="0"
                     android:layout_column="0"
+                    android:layout_gravity="center_vertical"
                     android:fontFamily="@font/raleway_bold"
                     android:text="@string/card_name_label"
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="250dp"
+                    android:layout_width="200dp"
                     android:layout_row="0"
                     android:layout_column="1"
                     android:layout_marginStart="8dp"
@@ -188,13 +185,14 @@
                 <TextView
                     android:layout_row="1"
                     android:layout_column="0"
+                    android:layout_gravity="center_vertical"
                     android:fontFamily="@font/raleway_bold"
                     android:text="@string/your_name_label"
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="250dp"
+                    android:layout_width="200dp"
                     android:layout_row="1"
                     android:layout_column="1"
                     android:layout_marginStart="8dp"
@@ -211,13 +209,14 @@
                 <TextView
                     android:layout_row="2"
                     android:layout_column="0"
+                    android:layout_gravity="center_vertical"
                     android:fontFamily="@font/raleway_bold"
                     android:text="@string/occupation_label"
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="250dp"
+                    android:layout_width="200dp"
                     android:layout_row="2"
                     android:layout_column="1"
                     android:layout_marginStart="8dp"
@@ -234,13 +233,14 @@
                 <TextView
                     android:layout_row="3"
                     android:layout_column="0"
+                    android:layout_gravity="center_vertical"
                     android:fontFamily="@font/raleway_bold"
                     android:text="@string/phone_number_label"
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="250dp"
+                    android:layout_width="200dp"
                     android:layout_row="3"
                     android:layout_column="1"
                     android:layout_marginStart="8dp"
@@ -257,13 +257,14 @@
                 <TextView
                     android:layout_row="4"
                     android:layout_column="0"
+                    android:layout_gravity="center_vertical"
                     android:fontFamily="@font/raleway_bold"
                     android:text="@string/email_label"
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="250dp"
+                    android:layout_width="200dp"
                     android:layout_row="4"
                     android:layout_column="1"
                     android:layout_marginStart="8dp"
@@ -280,13 +281,14 @@
                 <TextView
                     android:layout_row="5"
                     android:layout_column="0"
+                    android:layout_gravity="center_vertical"
                     android:fontFamily="@font/raleway_bold"
                     android:text="@string/address_label"
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="250dp"
+                    android:layout_width="200dp"
                     android:layout_row="5"
                     android:layout_column="1"
                     android:layout_marginStart="8dp"
@@ -303,13 +305,14 @@
                 <TextView
                     android:layout_row="6"
                     android:layout_column="0"
+                    android:layout_gravity="center_vertical"
                     android:fontFamily="@font/raleway_bold"
                     android:text="@string/web_site_label"
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="250dp"
+                    android:layout_width="200dp"
                     android:layout_row="6"
                     android:layout_column="1"
                     android:layout_marginStart="8dp"
@@ -326,13 +329,14 @@
                 <TextView
                     android:layout_row="7"
                     android:layout_column="0"
+                    android:layout_gravity="center_vertical"
                     android:fontFamily="@font/raleway_bold"
                     android:text="@string/sloganLabel"
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="250dp"
+                    android:layout_width="200dp"
                     android:layout_row="7"
                     android:layout_column="1"
                     android:layout_marginStart="8dp"
@@ -346,18 +350,6 @@
                         android:inputType="textPersonName" />
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <TextView
-                    android:layout_row="8"
-                    android:layout_column="0"
-                    android:fontFamily="@font/raleway_bold"
-                    android:text="@string/pick_up_logo_label"
-                    android:textAppearance="?android:textAppearanceMedium" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/pickUpImageBtn"
-                    android:layout_row="8"
-                    android:layout_column="1"
-                    android:text="@string/pick_up_image_btn" />
             </GridLayout>
 
             <com.google.android.material.button.MaterialButton

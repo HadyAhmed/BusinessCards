@@ -1,5 +1,6 @@
 package com.hadi.bc.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -10,7 +11,7 @@ import androidx.databinding.DataBindingUtil;
 import com.hadi.bc.R;
 import com.hadi.bc.databinding.ActivityAddCardBinding;
 
-public class AddCardActivity extends AppCompatActivity {
+public class AddCardActivity extends AppCompatActivity implements ChooseCardFragment.OnCardClickListenerChoice {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,5 +24,11 @@ public class AddCardActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+    }
+
+    @Override
+    public void moveToMainActivity() {
+        startActivity(new Intent(AddCardActivity.this, MainActivity.class));
+        finish();
     }
 }
