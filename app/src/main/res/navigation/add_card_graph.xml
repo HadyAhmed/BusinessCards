@@ -9,7 +9,9 @@
         android:name="com.hadi.bc.view.AddCardFragment"
         android:label="fragment_card_information"
         tools:layout="@layout/fragment_add_card">
-        <action app:destination="@id/chooseCardFragment" />
+        <action
+            android:id="@+id/chooseCard"
+            app:destination="@id/chooseCardFragment" />
         <argument
             android:name="cardItem"
             app:argType="com.hadi.bc.model.UserCard" />

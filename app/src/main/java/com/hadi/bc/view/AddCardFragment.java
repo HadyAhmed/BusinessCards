@@ -1,7 +1,6 @@
 package com.hadi.bc.view;
 
 
-import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -21,11 +20,6 @@ import com.hadi.bc.model.UserCard;
 
 public class AddCardFragment extends Fragment implements View.OnClickListener {
 
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-    }
-
     private FragmentAddCardBinding cardInformationBinding;
 
     public AddCardFragment() {
@@ -33,8 +27,7 @@ public class AddCardFragment extends Fragment implements View.OnClickListener {
     }
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         cardInformationBinding = FragmentAddCardBinding.inflate(inflater, container, false);
 
