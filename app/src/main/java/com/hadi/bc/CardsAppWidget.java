@@ -22,7 +22,6 @@ public class CardsAppWidget extends AppWidgetProvider {
         Intent intent = new Intent(context, AddCardActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
 
-
         views.setOnClickPendingIntent(R.id.addCardBtn, pendingIntent);
 
         // Instruct the widget manager to update the widget

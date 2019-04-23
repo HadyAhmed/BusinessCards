@@ -15,6 +15,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -50,9 +52,13 @@ public class MainActivity extends AppCompatActivity implements Toolbar.OnMenuIte
         super.onCreate(savedInstanceState);
         mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
+        MobileAds.initialize(this, getResources().getString(R.string.appAdsId));
+        mainBinding.adView.loadAd(new AdRequest.Builder().build());
+
         mainBinding.mainToolbar.inflateMenu(R.menu.main_menu);
         mainBinding.mainToolbar.setOnMenuItemClickListener(this);
 
+        // Check for internet connection
         new CheckForInternetConnection().execute();
 
         database = FirebaseDatabase.getInstance();

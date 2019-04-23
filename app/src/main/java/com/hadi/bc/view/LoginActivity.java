@@ -2,7 +2,6 @@ package com.hadi.bc.view;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -46,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (user == null) {
                     showUpLoginUi();
                 } else {
-                    Toast.makeText(LoginActivity.this, "Welcome " + user.getDisplayName(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, getResources().getString(R.string.welcome_msg) + user.getDisplayName(), Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(LoginActivity.this, MainActivity.class));
                     finish();
                 }

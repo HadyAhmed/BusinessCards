@@ -34,5 +34,13 @@
     <string name="add_widget">Add widget</string>
     <string name="card_name">Card Name</string>
     <string name="preview">(preview)</string>
+    <string name="wrong_card_msg">Something wrong happened</string>
+    <string name="failed_auth_msg">Account Authentication was failed</string>
+    <string name="welcome_msg">Welcome</string>
+    <string name="signOutTitle">Sign Out!</string>
+    <string name="dialog_msg">Are your sure!?</string>
+    <string name="ys_btn">Yes</string>
+    <string name="cancel_btn">Cancel</string>
+    <string name="appAdsId">ca-app-pub-1683808898642028~6737762309</string>
 
 </resources>

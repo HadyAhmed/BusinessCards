@@ -3,14 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mainLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:id="@+id/mainAppBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/mainToolbar"
@@ -21,9 +25,12 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/cardRv"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/adView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainAppBar"
             tools:listitem="@layout/business_card_item" />
 
         <TextView
@@ -35,7 +42,21 @@
             android:text="@string/empty_card_indication"
             android:textAlignment="center"
             android:textAllCaps="true"
-            android:textAppearance="?android:textAppearanceMedium" />
+            android:textAppearance="?android:textAppearanceMedium"
+            app:layout_constraintBottom_toTopOf="@id/adView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainAppBar" />
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addCardFab"
@@ -45,6 +66,8 @@
             android:layout_marginBottom="16dp"
             android:src="@drawable/ic_add"
             app:layout_anchor="@id/cardRv"
-            app:layout_anchorGravity="bottom|end" />
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            app:layout_anchorGravity="bottom|end"
+            app:layout_constraintBottom_toTopOf="@id/adView"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

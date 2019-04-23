@@ -33,7 +33,7 @@ public class CardDetailActivity extends AppCompatActivity {
         if (cardItem != null) {
             initUi(cardItem);
         } else {
-            Toast.makeText(this, "Something wrong happened", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getResources().getString(R.string.wrong_card_msg), Toast.LENGTH_SHORT).show();
             finish();
         }
     }

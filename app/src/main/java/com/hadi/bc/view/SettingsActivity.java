@@ -44,9 +44,9 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         AlertDialog.Builder signOutDialog = new AlertDialog.Builder(SettingsActivity.this);
-        signOutDialog.setTitle("Sign Out!")
-                .setMessage("Are your sure!?")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        signOutDialog.setTitle(getResources().getString(R.string.signOutTitle))
+                .setMessage(getResources().getString(R.string.dialog_msg))
+                .setPositiveButton(getResources().getString(R.string.ys_btn), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         AuthUI.getInstance().signOut(SettingsActivity.this);
@@ -54,7 +54,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                         finish();
                     }
                 })
-                .setNeutralButton("Cancel", null)
+                .setNeutralButton(getResources().getString(R.string.cancel_btn), null)
                 .show();
     }
 

@@ -19,6 +19,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.hadi.bc.R;
 import com.hadi.bc.adapter.ChooseCardAdapter;
 import com.hadi.bc.databinding.FragmentChooseCardBinding;
 import com.hadi.bc.model.UserCard;
@@ -120,7 +121,7 @@ public class ChooseCardFragment extends Fragment implements ChooseCardAdapter.On
             frontCardsReference.addChildEventListener(childEventListener);
 
         } else {
-            Toast.makeText(context, "Account Authentication was failed", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, context.getResources().getString(R.string.failed_auth_msg), Toast.LENGTH_SHORT).show();
         }
 
     }
