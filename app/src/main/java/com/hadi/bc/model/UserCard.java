@@ -4,6 +4,9 @@ package com.hadi.bc.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.firebase.database.IgnoreExtraProperties;
+
+@IgnoreExtraProperties
 public class UserCard implements Parcelable {
 
     private String cardAddress;

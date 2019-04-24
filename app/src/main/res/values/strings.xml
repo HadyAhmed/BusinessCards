@@ -31,7 +31,6 @@
     <string name="second_banner_body">Get inspired many ideas</string>
     <string name="third_banner_body">Sync your data with your google account so you won\'t lost your cards never</string>
     <string name="third_banner_header">Keep Sync</string>
-    <string name="add_widget">Add widget</string>
     <string name="card_name">Card Name</string>
     <string name="preview">(preview)</string>
     <string name="wrong_card_msg">Something wrong happened</string>
@@ -44,5 +43,8 @@
     <string name="appAdsId">ca-app-pub-1683808898642028~6737762309</string>
     <string name="settings_action_menu">Settings</string>
     <string name="add_card_desc">Button to add create business card</string>
+    <string name="cards_label">Cards</string>
+    <string name="show_all">Show All</string>
+    <string name="widgetButton">Show All</string>
 
 </resources>
